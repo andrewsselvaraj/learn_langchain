@@ -1,0 +1,3 @@
+Employees receive 10 sick-leave days per year.
+Unused sick leave does not carry over to the next year.
+Economy passengers can check in 25 kg of baggage. Business passengers can check in 35 kg.
