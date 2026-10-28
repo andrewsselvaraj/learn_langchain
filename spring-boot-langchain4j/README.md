@@ -1,7 +1,7 @@
 # LangChain concepts in Spring Boot (LangChain4j + Google Gemini)
 
 Spring Boot 3.5 + LangChain4j 1.22 + Google Gemini. One class per lesson in
-`src/main/java/com/example/langchain/demo`, one REST endpoint per lesson in `web/CourseController`.
+`src/main/java/com/example/langchain/demo`, REST endpoints per lesson in the `web/` controllers.
 
 ## Run the offline tests (no API key needed)
 
