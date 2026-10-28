@@ -1,0 +1,239 @@
+Beginner Level
+1. What is LangChain?
+LangChain is an open-source framework used to build applications powered by Large Language Models (LLMs). It provides components like prompts, chains, memory, retrievers, agents, and tools.
+2. Why do we need LangChain?
+Connect LLMs with external systems
+Access databases and APIs
+Maintain conversation history
+Build multi-step workflows
+Create AI agents
+3. What is a Chain in LangChain?
+A chain combines multiple components into a workflow.
+Example:
+User Query
+   ↓
+Prompt
+   ↓
+LLM
+   ↓
+Output
+4. What is PromptTemplate?
+Used to create reusable prompts with variables.
+Example:
+Java
+"Explain {topic} in simple terms"
+5. What is an LLM?
+A Large Language Model that generates text from prompts.
+Examples:
+GPT-4
+Claude
+Gemini
+Llama
+Azure OpenAI
+Intermediate Level
+6. What is Memory in LangChain?
+Memory stores conversation history and context.
+7. Types of Memory
+ConversationBufferMemory
+ConversationSummaryMemory
+VectorStoreMemory
+8. What is Retrieval Augmented Generation (RAG)?
+RAG retrieves information from external data before sending context to the LLM.
+9. Advantages of RAG?
+Reduces hallucination
+Uses latest enterprise data
+No retraining required
+Cost effective
+10. What is Embedding?
+A numerical vector representation of text.
+Example:
+"Java" → [0.12,0.34,0.95....]
+11. What is Chunking?
+Breaking large documents into smaller pieces before generating embeddings.
+12. What is a Vector Database?
+A database optimized for storing and searching embeddings.
+Examples:
+Pinecone
+ChromaDB
+Milvus
+Weaviate
+Azure AI Search
+13. What is Similarity Search?
+Finding the closest vectors using:
+Cosine Similarity
+Dot Product
+Euclidean Distance
+14. What is a Retriever?
+A component that finds relevant documents from a vector store.
+15. Difference Between Retriever and Vector Store?
+Vector Store
+Stores embeddings
+Retriever
+Searches embeddings
+Advanced Level
+16. What is an Agent?
+An AI component that decides which action/tool to execute.
+17. Agent vs Chain
+Chain
+Fixed workflow
+Predictable execution
+Agent
+Dynamic workflow
+Chooses tools automatically
+18. What are Tools?
+External functions or APIs used by agents.
+Examples:
+Calculator
+Weather API
+Database Query
+Search Engine
+19. What is Function Calling?
+LLM selects and invokes application functions.
+20. What is Tool Calling?
+Enhanced function calling where multiple tools can be called automatically.
+21. What is ReAct Agent?
+Reason + Act pattern.
+Flow:
+Think
+↓
+Select Tool
+↓
+Execute
+↓
+Observe
+↓
+Answer
+22. What is Multi-Agent Architecture?
+Example:
+Travel Agent
+      ↓
+ ┌────┼────┐
+ ↓    ↓    ↓
+Flight Hotel Payment
+Agent  Agent Agent
+LangChain4j Questions
+23. What is LangChain4j?
+Java framework inspired by LangChain.
+24. Why LangChain4j instead of Python LangChain?
+Native Java
+Spring Boot integration
+Type Safety
+Enterprise Support
+25. What is AiService?
+Converts Java interfaces into AI-powered services.
+Example:
+Java
+interface Assistant {
+String chat(String question);
+}
+26. What is EmbeddingModel?
+Generates vector embeddings for text.
+27. What is EmbeddingStore?
+Stores embeddings in memory or vector databases.
+28. What is ContentRetriever?
+Retrieves relevant content from a vector store.
+29. Explain RAG using LangChain4j.
+PDF
+ ↓
+DocumentParser
+ ↓
+TextSplitter
+ ↓
+EmbeddingModel
+ ↓
+EmbeddingStore
+ ↓
+ContentRetriever
+ ↓
+ChatModel
+ ↓
+Answer
+30. What is AI Service Memory?
+Stores conversation context automatically.
+Example:
+Java
+@MemoryId
+String sessionId;
+Scenario-Based Questions
+31. How would you build a chatbot over PDF documents?
+Steps:
+Load PDF
+Split into chunks
+Create embeddings
+Store in vector DB
+Retrieve relevant chunks
+Pass context to LLM
+Return answer
+32. How would you reduce hallucinations?
+Use RAG
+Better prompts
+Citations
+Validation layers
+Confidence thresholds
+33. How would you handle 1 Million Documents?
+Distributed vector DB
+Metadata filtering
+Re-ranking
+Hybrid search
+Caching
+34. What is Hybrid Search?
+Combines:
+Semantic Search (Vectors)
+Keyword Search (BM25)
+35. How do you secure a LangChain application?
+Input validation
+Prompt injection protection
+PII masking
+RBAC
+Secure API keys
+Content moderation
+Architect Round Questions
+36. RAG vs Fine-Tuning
+RAG
+External knowledge
+Easy updates
+Lower cost
+Fine-Tuning
+Model behavior customization
+Expensive
+Requires retraining
+37. When would you choose Fine-Tuning?
+Domain-specific language
+Consistent output format
+Industry-specific terminology
+38. What are the challenges in Production RAG?
+Chunking strategy
+Retrieval quality
+Latency
+Cost optimization
+Hallucination control
+Security
+39. How do you monitor an LLM application?
+Monitor:
+Token usage
+Latency
+Accuracy
+User feedback
+Retrieval quality
+Tools:
+LangSmith
+LangFuse
+Azure AI Foundry
+OpenTelemetry
+Frequently Asked Company Interview Questions (TCS / Infosys / Wipro / Accenture / Cognizant / Capgemini)
+40. Explain RAG Architecture.
+41. Difference Between Agent and Chain.
+42. How Do Embeddings Work?
+43. What is a Vector Database?
+44. Explain Different Chunking Strategies.
+45. How Do You Reduce Hallucinations?
+46. Difference Between LangChain and LangGraph.
+47. Difference Between LangChain and LangChain4j.
+48. Design a PDF Chatbot Architecture.
+49. How Would You Build an AI Travel Booking Agent?
+50. What is Prompt Injection?
+51. Explain Memory Types in LangChain.
+52. What is Hybrid Search?
+53. Explain Tool Calling.
+54. Explain Multi-Agent Architecture.
+55. Design an Enterprise Knowledge Assistant using Azure OpenAI and LangChain4j.
