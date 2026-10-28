@@ -1,0 +1,9 @@
+# Get a free API key at https://aistudio.google.com/apikey, then:
+#   export GEMINI_API_KEY=your-key      (Windows: set GEMINI_API_KEY=your-key)
+# Never commit the key to source control.
+course:
+  gemini:
+    api-key: ${GEMINI_API_KEY:}
+    chat-model: ${GEMINI_CHAT_MODEL:gemini-2.5-flash}
+    embedding-model: ${GEMINI_EMBEDDING_MODEL:gemini-embedding-001}
+    temperature: 0.0
