@@ -8,6 +8,7 @@ import org.bsc.langgraph4j.GraphInput;
 import org.bsc.langgraph4j.RunnableConfig;
 import org.bsc.langgraph4j.StateGraph;
 import org.bsc.langgraph4j.action.AsyncNodeAction;
+import org.bsc.langgraph4j.action.NodeAction;
 import static org.bsc.langgraph4j.action.AsyncNodeAction.node_async;
 import org.bsc.langgraph4j.state.AgentState;
 
@@ -22,8 +23,10 @@ public class LangGraphHelloWorldSimple {
 
     public static void main(String[] args) throws Exception {
         // Each node reads the state and returns the keys it wants to update
-        AsyncNodeAction<AgentState> greet = node_async(state -> Map.of("text", "Hello, " + state.value("name").orElse("World")));
-        AsyncNodeAction<AgentState> shout = node_async(state -> Map.of("text", state.value("text").orElse("") + "!!!"));
+        NodeAction<AgentState> greetAction = state -> Map.of("text", "Hello, " + state.value("name").orElse("World"));
+        AsyncNodeAction<AgentState> greet = node_async(greetAction);
+        NodeAction<AgentState> shoutAction = state -> Map.of("text", state.value("text").orElse("") + "!!!");
+        AsyncNodeAction<AgentState> shout = node_async(shoutAction);
 
         var app = new StateGraph<>(AgentState::new)
                 .addNode("greet", greet)
