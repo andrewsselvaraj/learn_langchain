@@ -19,6 +19,7 @@
     <properties>
         <java.version>21</java.version>
         <langchain4j.version>1.22.0</langchain4j.version>
+        <langgraph4j.version>1.9.6</langgraph4j.version>
     </properties>
 
     <dependencyManagement>
@@ -49,10 +50,21 @@
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-google-ai-gemini</artifactId>
         </dependency>
+        <!-- langchain-openai equivalent: used by the standalone.openai examples -->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai</artifactId>
+        </dependency>
         <!-- PyPDFLoader equivalent -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-document-parser-apache-pdfbox</artifactId>
+        </dependency>
+        <!-- langgraph equivalent: stateful graphs of nodes and edges -->
+        <dependency>
+            <groupId>org.bsc.langgraph4j</groupId>
+            <artifactId>langgraph4j-core</artifactId>
+            <version>${langgraph4j.version}</version>
         </dependency>
 
         <dependency>
